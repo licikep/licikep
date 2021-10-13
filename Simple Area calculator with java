@@ -1,0 +1,113 @@
+<!--Import Built-in packages-->
+
+import java.math.BigInteger;
+import java.util.HashMap;
+import java.util.Scanner;
+import javax.crypto.Mac;
+
+<--       -->
+
+
+
+<!--Paste this inside a java class-->
+
+static int a;
+static String sizeName;
+static int height,width,base;
+
+  public static void main(String[] args) {
+  
+  System.out.println("triangle , rectangle , square\n---------------------------------------");
+  
+  do{
+  
+  
+  Scanner sc = new Scanner(System.in);
+  System.out.print("Which size do you want to calculate : ");
+  sizeName = sc.next(); 
+  System.out.print("\n\n");
+  
+ 
+  switch(sizeName){
+    case"square":
+        square();
+        break ;
+        
+    case"rectangle":
+        rectangle();
+        break ;
+    case"triangle":
+        triangle(); 
+        break;
+        
+        
+  
+        
+        }
+        a=0;
+    System.out.println("\n<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>\n");
+        
+        }while(a==0);
+        
+ 
+ }
+ 
+ 
+ public static void square(){ 
+ try{
+ 
+ Scanner square = new Scanner(System.in);
+ System.out.print("Enter height of line : ");
+ int lineSize = square.nextInt();
+ 
+ 
+ int result = lineSize*lineSize;
+ System.out.println("\nArea of Square is "+result);
+ 
+ 
+ }catch(Exception e){
+   System.out.println("Please enter a valid number");
+ }
+}
+
+public static void rectangle(){ 
+
+int result;
+
+try {
+     Scanner rectangle = new Scanner(System.in);
+     System.out.print("Enter height of rectangle : ");
+     height=rectangle.nextInt();
+     System.out.print("Enter width of rectangle : ");
+     width = rectangle.nextInt();
+     
+     result = height*width;
+     
+     System.out.println("\nArea Of rectangle is : "+result);
+     
+     }catch(Exception a){
+       System.out.println("Please enter a valid number");
+     }
+  
+}
+
+public static void triangle(){
+
+try{
+  Scanner triangle = new Scanner(System.in);
+  System.out.print("Enter height of Triangle : ");
+  height = triangle.nextInt();
+  System.out.print("Enter base of Triangle : ");
+  base = triangle.nextInt();
+  
+  int result = 1/2*height*base;
+  System.out.println("Area of Triangle is : "+result);
+  
+  }catch (Exception d){
+    System.out.println("Please enter a valid number");
+  }
+}
+
+ 
+ 
+ 
